@@ -1,0 +1,9 @@
+users.hbs <br>
+
+<h1>List users</h1>
+{{#each this.model as |user|}}
+  <p>User id : {{user.id}}</p>
+  <p>User name : {{user.name}}</p>
+  <img src={{user.avatar}} alt="Avatar" class="avatar">
+  <hr>
+{{/each}}

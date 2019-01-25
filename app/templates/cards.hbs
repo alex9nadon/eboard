@@ -1,0 +1,11 @@
+Cards.hbs <br>
+
+<h1>List cards</h1>
+{{#each this.model as |card|}}
+  <p>Card id : {{card.id}}</p>
+  <p>name : {{card.name}}</p>
+  <p>description : {{card.description}}</p>
+  <p>order : {{card.order}}</p>
+  <p>creationDate : {{card.creationDate}}</p>
+  <hr>
+{{/each}}

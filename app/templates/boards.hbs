@@ -1,0 +1,10 @@
+boards.hbs <br>
+
+<h1>List Boards</h1>
+{{#each this.model as |board|}}
+  <p>Board id : {{board.id}}</p>
+  <p>Board name : {{board.name}}</p>
+  <p>Board description : {{board.description}}</p>
+  <p>Board creationDate : {{board.creationDate}}</p>
+  <hr>
+{{/each}}

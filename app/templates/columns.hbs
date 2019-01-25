@@ -1,0 +1,15 @@
+Columns.hbs <br>
+
+<h1>List Columns</h1>
+{{#each this.model as |column|}}
+  <p>name : {{column.name}}</p>
+  <p>description : {{column.description}}</p>
+  <p>order : {{column.order}}</p>
+  <p>actualDate : {{column.actualDate}}</p>
+  <p>scheduledDate : {{column.scheduledDate}}</p>
+  <p>completedDate : {{column.completedDate}}</p>
+  <p>creationDate : {{column.creationDate}}</p>
+  <p>priority : {{column.priority}}</p>
+  <p>Note: {{column.note}}</p>
+  <hr>
+{{/each}}
