@@ -3,7 +3,7 @@ import { Factory, faker } from 'ember-cli-mirage';
 export default Factory.extend({
 
   name(i) {
-    return `Board ${i}`;
+    return `Column ${i}`;
   },
 
   description(){
@@ -36,6 +36,6 @@ export default Factory.extend({
 
   note(){
     return faker.lorem.sentences(3,3);
-  },
+  }
 
 });

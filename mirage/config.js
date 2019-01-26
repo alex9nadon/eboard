@@ -2,9 +2,9 @@ export default function() {
 
   //this.namespace = 'api';
 
-  this.get('/users', (schema) => {
-    return schema.users.all();
-  });
+  this.get('/users');
+
+  this.get('/users/:id');
 
   this.get('/boards', (schema) => {
     return schema.boards.all();
@@ -21,11 +21,6 @@ export default function() {
   this.get('/boards/:id', (schema, request) => {
     var id = request.params.id;
     return schema.boards.find(id);
-  })
-
-  this.get('/users/:id', (schema, request) => {
-    var id = request.params.id;
-    return schema.users.find(id);
   })
 
   this.get('/cards/:id', (schema, request) => {

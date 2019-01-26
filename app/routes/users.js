@@ -1,7 +1,9 @@
 import Route from '@ember/routing/route';
 
 export default Route.extend({
-  model(params) {
-      return this.store.findAll('user');
+  model() {
+      return this.store.findAll('user', {
+        include: 'boards.columns.cards'
+      });
     }
 });

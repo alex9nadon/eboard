@@ -6,4 +6,13 @@ users.hbs <br>
   <p>User name : {{user.name}}</p>
   <img src={{user.avatar}} alt="Avatar" class="avatar">
   <hr>
+  {{#each user.boards as |board|}}
+    <p>Board name : {{board.name}}</p>
+    {{#each board.columns as |column|}}
+      <p>Column name : {{column.name}}</p>
+      {{#each column.cards as |card|}}
+        <p>Card name : {{card.name}}</p>
+      {{/each}}
+    {{/each}}
+  {{/each}}
 {{/each}}

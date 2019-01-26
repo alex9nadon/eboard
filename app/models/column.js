@@ -20,7 +20,7 @@ export default DS.Model.extend({
 
    note: DS.attr('string'),
 
-   board: DS.belongsTo(),
+   board: DS.belongsTo('board'),
 
-   cards: DS.hasMany()
+   cards: DS.hasMany('card')
 });

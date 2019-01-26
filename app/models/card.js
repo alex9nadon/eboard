@@ -10,5 +10,5 @@ export default DS.Model.extend({
 
     creationDate: DS.attr('date'),
 
-    column: DS.belongsTo()
+    column: DS.belongsTo('column')
 });
