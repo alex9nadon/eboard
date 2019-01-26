@@ -18,6 +18,8 @@ Router.map(function() {
 
   this.route('columns');
   this.route('column', { path: '/column/:id' });
+
+  this.route('eboard', { path: '/eboard/:id' });
 });
 
 export default Router;

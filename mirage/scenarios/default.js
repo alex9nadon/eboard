@@ -19,7 +19,11 @@ export default function(server) {
 
   let card33 =  server.createList('card', 5);
   let column33 = server.create('column', { cards: card33 });
-  let board2 = server.create('board', { columns:[column11,column22,column33] });
+
+  let card44 =  server.createList('card', 7);
+  let column44 = server.create('column', { cards: card44 });
+
+  let board2 = server.create('board', { columns:[column11,column22,column33, column44] });
 
 
   server.create('user', { boards : [board1] });
