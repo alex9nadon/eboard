@@ -1,6 +1,16 @@
 <div class="kb-column">
     <h5>{{column.name}}</h5>
-    {{#each column.cards as |card|}}
-      {{kb-card card=card}}
-    {{/each}}
+    {{#sortable-objects sortableObjectList=column.cards sortingScope='a' }}
+      {{#each column.cards as |card|}}
+        {{#draggable-object content=card  overrideClass='sortObject' isSortable=true sortingScope='a'}}
+          {{kb-card card=card}}
+        {{/draggable-object}}
+        {{else}}
+          <div>
+            {{#draggable-object-target}}
+              Empty <br><br><br><br>end
+            {{/draggable-object-target}}
+          </div>
+      {{/each}}
+    {{/sortable-objects}}
 </div>
